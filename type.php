@@ -79,57 +79,23 @@ echo var_dump($a, $b, $c, $d)
 ?>
 
 <?php
-$age = 35;
-$name = 'Hasan';
-echo 'this is a string with single quote';
-
-echo 'you can also add new line \n
-as it is 
-you want<br>';
-
-echo 'Arnold said: "I\'ll be back"';
-
-echo 'Output is \\*.*?';
-
-echo "This will not expand: \n a new line";
-
-echo 'Name is',$name,' and age is ',$age, '<br>';
-?>
-
-<?php 
-
-echo <<<END
-    a
-    b
-    c
-    END;
-?>
-
-<?php
-{
-    echo <<<END
-        a
-        END;
-}
-{
-    echo <<<END
-    a
-    END;
-}
-{
-    echo <<<END
-        a
-    END;
-}
-?>
-
-<?php
-$values = [<<<END
-    a
-        b
-            c 
-END, 'd e f'];
-var_dump($values);
+$expand = 'first var';
+$either = 'second var';
+echo' <br>string <br>';
+echo 'this is a simple string <br>';
+echo 'You can also have embedded newlines in
+strings this way as it is
+okay to do<br>';
+// Outputs: Arnold once said: "I'll be back"
+echo 'Arnold once said:"I\'will be back"<br>';
+// Outputs: You deleted C:\*.*?
+echo 'You deleted C:\\*.*?<br>';
+echo 'This will not expand: \n a newline<br>';
+echo "Variable do not $expand $either<br>";
+echo "double qoute expand the variable<br>";
+echo "Akshit " ."\r\n"."Loves GeeksForGeeks<br>";
+echo nl2br("You will find the \n newlines in this string \r\n on the browser window.<br>");
+echo "Akshit "."\r\n"."Loves GeeksForGeeks";
 ?>
 
 
